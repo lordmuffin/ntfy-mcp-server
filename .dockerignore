@@ -1,0 +1,28 @@
+# Build artifacts (regenerated during docker build)
+node_modules/
+dist/
+
+# Version control and CI
+.git/
+.github/
+
+# Claude Code workspace files
+.claude/
+
+# Local runtime artifacts
+logs/
+
+# Documentation (not needed in image)
+docs/
+
+# Environment / credential files — must never enter the image
+.env
+.env.*
+*.env
+
+# Project-specific config files not used at runtime
+repomix.config.json
+smithery.yaml
+
+# Local development shim (has hardcoded absolute paths, not for container use)
+shim.mjs
